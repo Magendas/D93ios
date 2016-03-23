@@ -84,31 +84,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YT3-y0-qoE">
-                                <rect key="frame" x="380" y="28" width="100" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YT3-y0-qoE">
+                                <rect key="frame" x="305" y="28" width="130" height="36"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="Mz6-l0-Hax"/>
+                                    <constraint firstAttribute="width" constant="130" id="Mz6-l0-Hax"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="tintColor" red="0.41176470590000003" green="0.12941176469999999" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Education"/>
+                                <connections>
+                                    <action selector="onEduSchedButtonTouchUpInside" destination="nsD-ds-84A" eventType="touchUpInside" id="LEe-Qx-oX4"/>
+                                </connections>
                             </button>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="btu-3g-6h0">
                                 <rect key="frame" x="0.0" y="80" width="600" height="471"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                             </webView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IdX-33-brg">
-                                <rect key="frame" x="285" y="21" width="20" height="37"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IdX-33-brg">
+                                <rect key="frame" x="290" y="21" width="10" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Tf7-i2-BCh"/>
+                                    <constraint firstAttribute="width" constant="10" id="d4w-m3-SdO"/>
+                                    <constraint firstAttribute="height" constant="30" id="eyM-ay-K0i"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Tf7-i2-BCh"/>
+                                    </mask>
+                                </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xoq-OH-Upk">
-                                <rect key="frame" x="118" y="28" width="100" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xoq-OH-Upk">
+                                <rect key="frame" x="155" y="28" width="130" height="36"/>
+                                <color key="backgroundColor" red="0.41176470588235292" green="0.12941176470588234" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="hvc-xa-ghN"/>
+                                    <constraint firstAttribute="width" constant="130" id="hvc-xa-ghN"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Conference"/>
+                                <connections>
+                                    <action selector="onConfSchedButtonTouchUpInside" destination="nsD-ds-84A" eventType="touchUpInside" id="0dc-Ah-cqE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -116,14 +135,14 @@
                             <constraint firstItem="IdX-33-brg" firstAttribute="top" secondItem="gL3-XR-fln" secondAttribute="bottom" constant="1" id="D0L-Ag-KiX"/>
                             <constraint firstItem="btu-3g-6h0" firstAttribute="leading" secondItem="xPD-1Z-GnG" secondAttribute="leadingMargin" constant="-20" id="PLt-0V-yat"/>
                             <constraint firstItem="btu-3g-6h0" firstAttribute="top" secondItem="YT3-y0-qoE" secondAttribute="bottom" constant="40" id="QwJ-xR-nA1"/>
-                            <constraint firstItem="IdX-33-brg" firstAttribute="leading" secondItem="xoq-OH-Upk" secondAttribute="trailing" constant="10" id="TJj-Yf-p6T"/>
+                            <constraint firstItem="IdX-33-brg" firstAttribute="leading" secondItem="xoq-OH-Upk" secondAttribute="trailing" constant="5" id="TJj-Yf-p6T"/>
                             <constraint firstItem="YT3-y0-qoE" firstAttribute="top" secondItem="gL3-XR-fln" secondAttribute="bottom" constant="8" id="dsy-1j-4Dc"/>
                             <constraint firstItem="Oio-vo-AXj" firstAttribute="top" secondItem="btu-3g-6h0" secondAttribute="bottom" id="eHh-H3-AtE"/>
                             <constraint firstItem="xoq-OH-Upk" firstAttribute="top" secondItem="gL3-XR-fln" secondAttribute="bottom" constant="8" id="iVe-Zr-gVu"/>
                             <constraint firstItem="IdX-33-brg" firstAttribute="centerX" secondItem="xPD-1Z-GnG" secondAttribute="centerX" constant="-5" id="kBQ-pa-YXP"/>
                             <constraint firstItem="btu-3g-6h0" firstAttribute="top" secondItem="gL3-XR-fln" secondAttribute="bottom" constant="60" id="mtD-ei-wSY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="btu-3g-6h0" secondAttribute="trailing" constant="-20" id="uru-Oo-o6l"/>
-                            <constraint firstItem="YT3-y0-qoE" firstAttribute="leading" secondItem="IdX-33-brg" secondAttribute="trailing" constant="10" id="zjK-QG-bq7"/>
+                            <constraint firstItem="YT3-y0-qoE" firstAttribute="leading" secondItem="IdX-33-brg" secondAttribute="trailing" constant="5" id="zjK-QG-bq7"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -133,6 +152,8 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Schedule" image="first" id="fFJ-OQ-IiL"/>
                     <connections>
+                        <outlet property="confSchedButton" destination="xoq-OH-Upk" id="3Cq-GE-Ik7"/>
+                        <outlet property="eduSchedButton" destination="YT3-y0-qoE" id="Fog-Xr-spb"/>
                         <outlet property="webView" destination="btu-3g-6h0" id="94t-bj-W2X"/>
                     </connections>
                 </viewController>
