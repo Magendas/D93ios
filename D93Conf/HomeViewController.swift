@@ -8,22 +8,34 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
-    
+class HomeViewController: UIViewController, UITabBarDelegate {
     
     @IBOutlet weak var webView: UIWebView!
     
+    let mainViewURL = "http://magendas-stage.com/service/toast-master/view/mobile/event/2016_PREMIERE_CONFERENCE_D93.php"
+    
     func loadMainWebPage() {
+        
+        if(webView.request != nil) {
+            if(webView.request!.URL?.absoluteString == mainViewURL) {
+                print("same URL.. no update")
+                return
+            }
+        }
+        
+        
         webView.allowsInlineMediaPlayback = true
         webView.mediaPlaybackRequiresUserAction = false
         webView.opaque = false
         
         
-        let url = NSURL(string: "http://magendas-stage.com/service/toast-master/view/mobile/event/2016_PREMIERE_CONFERENCE_D93.php")
+        let url = NSURL(string: mainViewURL)
         
         let requestObj = NSURLRequest(URL: url!)
         webView.loadRequest(requestObj)
         
+        
+        print("load main web..")
 
     }
     
@@ -31,6 +43,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         loadMainWebPage()
+        print("Home.. viewDidLoad")
         
     }
 
@@ -38,7 +51,10 @@ class HomeViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem) {
+        print("HOME")
+    }
 
 }
 

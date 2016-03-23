@@ -6,7 +6,6 @@
 //  Copyright © 2016 magendas. All rights reserved.
 //
 
-
 import UIKit
 
 class ScheduleViewController: UIViewController {
