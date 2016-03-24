@@ -13,5 +13,8 @@ class MainTabBarController: UITabBarController {
     override func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem) {
         self.viewControllers![0].viewDidLoad()
     }
+    
+    override func viewDidLoad() {
+        self.tabBar.tintColor = AppColors().Margenta
+    }
 }
-

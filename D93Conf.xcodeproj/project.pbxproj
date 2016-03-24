@@ -18,6 +18,7 @@
 		93BF685F1CA2638800024CED /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BF685E1CA2638800024CED /* ScheduleViewController.swift */; };
 		93C82F741CA28C8200564AF4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C82F731CA28C8100564AF4 /* Default-568h@2x.png */; };
 		93FD83A31CA2F23A0091D74A /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FD83A21CA2F23A0091D74A /* MainTabBarController.swift */; };
+		93FD83A51CA3DBB50091D74A /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FD83A41CA3DBB50091D74A /* AppColors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		93BF685E1CA2638800024CED /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		93C82F731CA28C8100564AF4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		93FD83A21CA2F23A0091D74A /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		93FD83A41CA3DBB50091D74A /* AppColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				93BF685A1CA2425400024CED /* DdayTimer.swift */,
 				93BF685C1CA2438900024CED /* TalkToServer.swift */,
 				93FD83A21CA2F23A0091D74A /* MainTabBarController.swift */,
+				93FD83A41CA3DBB50091D74A /* AppColors.swift */,
 			);
 			path = D93Conf;
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 				93BF68471CA2396A00024CED /* AppDelegate.swift in Sources */,
 				93FD83A31CA2F23A0091D74A /* MainTabBarController.swift in Sources */,
 				93BF685F1CA2638800024CED /* ScheduleViewController.swift in Sources */,
+				93FD83A51CA3DBB50091D74A /* AppColors.swift in Sources */,
 				93BF685D1CA2438900024CED /* TalkToServer.swift in Sources */,
 				93BF68491CA2396A00024CED /* HomeViewController.swift in Sources */,
 			);

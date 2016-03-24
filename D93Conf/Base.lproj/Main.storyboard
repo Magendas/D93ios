@@ -31,7 +31,7 @@
                             <constraint firstItem="0FV-q8-Alz" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="icn-j1-NuX"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home" selectedImage="home" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="webView" destination="0FV-q8-Alz" id="Vt6-37-EWT"/>
                     </connections>
@@ -52,21 +52,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" text="Map" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="195" y="279" width="210" height="42"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="zuC-G9-r1q">
+                                <rect key="frame" x="0.0" y="20" width="600" height="531"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
+                            <constraint firstItem="zuC-G9-r1q" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="-20" id="hwE-oP-hFz"/>
+                            <constraint firstItem="zuC-G9-r1q" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="nKs-z4-PRL"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="zuC-G9-r1q" secondAttribute="bottom" id="uTZ-Qj-SJn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zuC-G9-r1q" secondAttribute="trailing" constant="-20" id="uf3-5a-xBy"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="Map" image="map" selectedImage="map" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -150,7 +148,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Schedule" image="first" id="fFJ-OQ-IiL"/>
+                    <tabBarItem key="tabBarItem" tag="2" title="Schedule" image="sched" selectedImage="sched" id="fFJ-OQ-IiL"/>
                     <connections>
                         <outlet property="confSchedButton" destination="xoq-OH-Upk" id="3Cq-GE-Ik7"/>
                         <outlet property="eduSchedButton" destination="YT3-y0-qoE" id="Fog-Xr-spb"/>
@@ -183,7 +181,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="home" width="60" height="60"/>
+        <image name="map" width="60" height="60"/>
+        <image name="sched" width="60" height="60"/>
     </resources>
+    <color key="tintColor" red="0.41176470590000003" green="0.12941176469999999" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
 </document>
