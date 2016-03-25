@@ -15,7 +15,6 @@ class HomeViewController: UIViewController, UITabBarDelegate {
     let mainViewURL = "http://magendas-stage.com/service/toast-master/view/mobile/event/2016_PREMIERE_CONFERENCE_D93.php"
     
     func loadMainWebPage() {
-        
         if(webView.request != nil) {
             if(webView.request!.URL?.absoluteString == mainViewURL) {
                 print("same URL.. no update")
@@ -23,28 +22,22 @@ class HomeViewController: UIViewController, UITabBarDelegate {
             }
         }
         
-        
         webView.allowsInlineMediaPlayback = true
         webView.mediaPlaybackRequiresUserAction = false
         webView.opaque = false
-        
         
         let url = NSURL(string: mainViewURL)
         
         let requestObj = NSURLRequest(URL: url!)
         webView.loadRequest(requestObj)
         
-        
         print("load main web..")
-
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         loadMainWebPage()
-        print("Home.. viewDidLoad")
-        
     }
 
     override func didReceiveMemoryWarning() {

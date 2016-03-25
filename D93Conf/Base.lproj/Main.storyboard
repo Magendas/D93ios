@@ -38,7 +38,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="850" y="-428"/>
+            <point key="canvasLocation" x="720" y="-432"/>
         </scene>
         <!--MapView-->
         <scene sceneID="wg7-f3-ORb">
@@ -55,16 +55,51 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="zuC-G9-r1q">
                                 <rect key="frame" x="0.0" y="20" width="600" height="531"/>
                             </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seoul Woman's Plaza (서울 여성 플라자)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7R-5V-ifV">
+                                <rect key="frame" x="22" y="460" width="291" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dongjak-gu, Seoul" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVJ-Ic-OcG">
+                                <rect key="frame" x="22" y="510" width="142" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18 Yeouidaebang-ro 54-gil" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Heq-6N-x1D">
+                                <rect key="frame" x="22" y="490" width="205" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="h7R-5V-ifV" secondAttribute="bottom" constant="70" id="1xZ-Km-K1K"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="Heq-6N-x1D" secondAttribute="bottom" constant="40" id="DrF-tZ-eBB"/>
+                            <constraint firstItem="VVJ-Ic-OcG" firstAttribute="top" secondItem="Heq-6N-x1D" secondAttribute="bottom" constant="30" id="J9h-eT-pvD"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="VVJ-Ic-OcG" secondAttribute="bottom" constant="20" id="YUS-43-t5K"/>
                             <constraint firstItem="zuC-G9-r1q" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="-20" id="hwE-oP-hFz"/>
+                            <constraint firstItem="VVJ-Ic-OcG" firstAttribute="top" secondItem="Heq-6N-x1D" secondAttribute="bottom" constant="40" id="m1F-Ut-qnF"/>
                             <constraint firstItem="zuC-G9-r1q" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="nKs-z4-PRL"/>
+                            <constraint firstItem="h7R-5V-ifV" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="2" id="nLD-Cu-rUB"/>
                             <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="zuC-G9-r1q" secondAttribute="bottom" id="uTZ-Qj-SJn"/>
                             <constraint firstAttribute="trailingMargin" secondItem="zuC-G9-r1q" secondAttribute="trailing" constant="-20" id="uf3-5a-xBy"/>
+                            <constraint firstItem="Heq-6N-x1D" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="2" id="unv-ub-1bF"/>
+                            <constraint firstItem="VVJ-Ic-OcG" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="2" id="wAg-0R-X2M"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="J9h-eT-pvD"/>
+                                <exclude reference="m1F-Ut-qnF"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" tag="1" title="Map" image="map" selectedImage="map" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="mapView" destination="zuC-G9-r1q" id="zNY-i5-Tqw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -127,10 +162,17 @@
                                     <action selector="onConfSchedButtonTouchUpInside" destination="nsD-ds-84A" eventType="touchUpInside" id="0dc-Ah-cqE"/>
                                 </connections>
                             </button>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yzz-xo-eF7">
+                                <rect key="frame" x="0.0" y="80" width="600" height="471"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="IdX-33-brg" firstAttribute="top" secondItem="gL3-XR-fln" secondAttribute="bottom" constant="1" id="D0L-Ag-KiX"/>
+                            <constraint firstItem="Yzz-xo-eF7" firstAttribute="top" secondItem="gL3-XR-fln" secondAttribute="bottom" constant="60" id="E0n-wE-ASv"/>
+                            <constraint firstItem="Oio-vo-AXj" firstAttribute="top" secondItem="Yzz-xo-eF7" secondAttribute="bottom" id="J71-V7-qMl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Yzz-xo-eF7" secondAttribute="trailing" constant="-20" id="N3E-KO-Fg8"/>
                             <constraint firstItem="btu-3g-6h0" firstAttribute="leading" secondItem="xPD-1Z-GnG" secondAttribute="leadingMargin" constant="-20" id="PLt-0V-yat"/>
                             <constraint firstItem="btu-3g-6h0" firstAttribute="top" secondItem="YT3-y0-qoE" secondAttribute="bottom" constant="40" id="QwJ-xR-nA1"/>
                             <constraint firstItem="IdX-33-brg" firstAttribute="leading" secondItem="xoq-OH-Upk" secondAttribute="trailing" constant="5" id="TJj-Yf-p6T"/>
@@ -139,6 +181,7 @@
                             <constraint firstItem="xoq-OH-Upk" firstAttribute="top" secondItem="gL3-XR-fln" secondAttribute="bottom" constant="8" id="iVe-Zr-gVu"/>
                             <constraint firstItem="IdX-33-brg" firstAttribute="centerX" secondItem="xPD-1Z-GnG" secondAttribute="centerX" constant="-5" id="kBQ-pa-YXP"/>
                             <constraint firstItem="btu-3g-6h0" firstAttribute="top" secondItem="gL3-XR-fln" secondAttribute="bottom" constant="60" id="mtD-ei-wSY"/>
+                            <constraint firstItem="Yzz-xo-eF7" firstAttribute="leading" secondItem="xPD-1Z-GnG" secondAttribute="leadingMargin" constant="-20" id="ncs-UJ-gDp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="btu-3g-6h0" secondAttribute="trailing" constant="-20" id="uru-Oo-o6l"/>
                             <constraint firstItem="YT3-y0-qoE" firstAttribute="leading" secondItem="IdX-33-brg" secondAttribute="trailing" constant="5" id="zjK-QG-bq7"/>
                         </constraints>
@@ -152,12 +195,13 @@
                     <connections>
                         <outlet property="confSchedButton" destination="xoq-OH-Upk" id="3Cq-GE-Ik7"/>
                         <outlet property="eduSchedButton" destination="YT3-y0-qoE" id="Fog-Xr-spb"/>
-                        <outlet property="webView" destination="btu-3g-6h0" id="94t-bj-W2X"/>
+                        <outlet property="webViewConf" destination="btu-3g-6h0" id="kp3-EF-ulE"/>
+                        <outlet property="webViewEdu" destination="Yzz-xo-eF7" id="o7K-1G-aPa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x8O-4w-659" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="776" y="1131"/>
+            <point key="canvasLocation" x="750" y="1119"/>
         </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">

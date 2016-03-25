@@ -12,7 +12,9 @@ class ScheduleViewController: UIViewController {
     
     @IBOutlet weak var eduSchedButton: UIButton!
     @IBOutlet weak var confSchedButton: UIButton!
-    @IBOutlet weak var webView: UIWebView!
+    
+    @IBOutlet weak var webViewConf: UIWebView!
+    @IBOutlet weak var webViewEdu: UIWebView!
     
     let confSchedURL: String = "http://magendas-stage.com/service/toast-master/view/mobile/event/2016_PREMIERE_CONFERENCE_D93_program_schedule.php"
     let eduSchedURL: String = "http://magendas-stage.com/service/toast-master/view/mobile/event/2016_PREMIERE_CONFERENCE_D93_education_schedule.php"
@@ -33,7 +35,9 @@ class ScheduleViewController: UIViewController {
             confSchedButton.backgroundColor = colorMargenta
             eduSchedButton.tintColor = colorMargenta
             eduSchedButton.backgroundColor = colorWhite
-            loadWebPage(confSchedURL)
+            
+            webViewConf.hidden = false
+            webViewEdu.hidden = true
         }
     }
     
@@ -45,19 +49,33 @@ class ScheduleViewController: UIViewController {
             confSchedButton.backgroundColor = colorWhite
             eduSchedButton.tintColor = colorWhite
             eduSchedButton.backgroundColor = colorMargenta
-            loadWebPage(eduSchedURL)
+            
+            webViewConf.hidden = true
+            webViewEdu.hidden = false
         }
     }
     
-    
-    func loadWebPage(url: String) {
+    func loadWebPage(urlstr: String) {
+        var webView: UIWebView!
+        if(urlstr == confSchedURL){ webView = self.webViewConf }
+        else if(urlstr == eduSchedURL){ webView = self.webViewEdu }
+        
         webView.allowsInlineMediaPlayback = true
         webView.mediaPlaybackRequiresUserAction = false
         webView.opaque = false
         
-        let url = NSURL(string: url)
+        let url = NSURL(string: urlstr)
         let requestObj = NSURLRequest(URL: url!)
+        
+        print("load web!! \(urlstr)")
         webView.loadRequest(requestObj)
+    }
+    
+    func preloadWebView(){
+        loadWebPage(confSchedURL)
+        loadWebPage(eduSchedURL)
+        webViewConf.hidden = false
+        webViewEdu.hidden = true
     }
     
     override func viewDidLoad() {
@@ -67,8 +85,8 @@ class ScheduleViewController: UIViewController {
         //setup button
         setButtonSettings()
         
-        //load conf sched url first..
-        loadWebPage(confSchedURL)
+        //load webview
+        preloadWebView()
     }
     
     override func didReceiveMemoryWarning() {
